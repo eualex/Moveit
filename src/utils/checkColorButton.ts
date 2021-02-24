@@ -3,7 +3,7 @@ import { ButtonColorType } from '../components/Button/types'
 declare interface checkColorButtonProps {
   bg: string
   color: string
-  hover: string
+  hover?: string
   hoverColor?: string
 }
 
@@ -23,6 +23,17 @@ export const checkColorButton = (
         color: 'var(--title)',
         hover: 'var(--red)',
         hoverColor: 'var(--white)'
+      }
+    case 'disable':
+      return {
+        bg: 'var(--white)',
+        color: 'var(--title)',
+      }
+    default:
+      return {
+        bg: 'var(--blue)',
+        color: 'var(--white)',
+        hover: 'var(--blue-dark)'
       }
   }
 }
