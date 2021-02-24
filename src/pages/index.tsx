@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ChallengeBox from '../components/ChallengeBox';
 
 import CompletedChallenges from "../components/CompletedChallenges";
 import Countdown from "../components/Countdown";
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
           <Countdown />
         </Styles.LetfContainer>
         <Styles.RightContainer>
+          <ChallengeBox />
         </Styles.RightContainer>
       </Styles.Wrapper>
     </Styles.Container>
