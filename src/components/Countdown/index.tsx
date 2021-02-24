@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react'
 import * as Styles from './styles'
 
 import Button from '../Button'
+import useChallenge from '../../hooks/useChallenge';
 
 let countdownTimeout: NodeJS.Timeout;
 
 const Countdown: React.FC = () => {
+  const { startNewChallenge } = useChallenge()
+
   const [time, setTime] = useState(0.1 * 60)
   const [isActive, setIsActive] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
@@ -34,6 +37,7 @@ const Countdown: React.FC = () => {
     } else if (isActive && time === 0) {
       setHasFinished(true)
       setIsActive(false)
+      startNewChallenge()
     }
   }, [isActive, time])
 
@@ -59,7 +63,7 @@ const Countdown: React.FC = () => {
       ) : (
         <>
           {isActive ? (
-        <Button type="button" color="danger" onClick={resetCountdown}>
+        <Button type="button" color="secondary" onClick={resetCountdown}>
           Abandonar ciclo
         </Button>
       ) : (
