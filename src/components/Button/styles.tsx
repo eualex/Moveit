@@ -26,7 +26,7 @@ export const ButtonContainer = styled.button<ButtonStylesProps>`
 
   transition: all 0.3s ease-in-out;
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: ${({ colorType }) => checkColorButton(colorType).hover};
     color: ${({ colorType }) =>
       checkColorButton(colorType).hoverColor ||
