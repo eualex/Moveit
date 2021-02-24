@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import CompletedChallenges from "../components/CompletedChallenges";
 import Countdown from "../components/Countdown";
 import ExperienceBar from "../components/ExperienceBar";
@@ -8,12 +10,15 @@ import * as Styles from "../styles/pages/Home";
 const Home: React.FC = () => {
   return (
     <Styles.Container>
+      <Head>
+        <title>Inicio | Moveit</title>
+      </Head>
       <ExperienceBar />
       <Styles.Wrapper>
         <Styles.LetfContainer>
           <Profile />
           <CompletedChallenges />
-          {/* <Countdown /> */}
+          <Countdown />
         </Styles.LetfContainer>
         <Styles.RightContainer>
         </Styles.RightContainer>
