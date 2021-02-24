@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as Styles from './styles'
 
 import Button from '../Button'
-import useChallenge from '../../hooks/useChallenge';
+import useChallenge from '../../hooks/useChallenge'
 
-let countdownTimeout: NodeJS.Timeout;
+let countdownTimeout: NodeJS.Timeout
 
-const Countdown: React.FC = () => {
+const Countdown = (): JSX.Element => {
   const { startNewChallenge } = useChallenge()
 
   const [time, setTime] = useState(0.1 * 60)
@@ -63,14 +63,14 @@ const Countdown: React.FC = () => {
       ) : (
         <>
           {isActive ? (
-        <Button type="button" color="secondary" onClick={resetCountdown}>
-          Abandonar ciclo
-        </Button>
-      ) : (
-        <Button type="button" color="primary" onClick={startCountdown}>
-          Iniciar um ciclo
-        </Button>
-      )}
+            <Button type="button" color="secondary" onClick={resetCountdown}>
+              Abandonar ciclo
+            </Button>
+          ) : (
+            <Button type="button" color="primary" onClick={startCountdown}>
+              Iniciar um ciclo
+            </Button>
+          )}
         </>
       )}
     </Styles.ContainerCountdown>

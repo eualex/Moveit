@@ -1,7 +1,9 @@
+import React from 'react'
+
 import useChallenge from '../../hooks/useChallenge'
 import * as Styles from './styles'
 
-const ExperienceBar: React.FC = () => {
+const ExperienceBar = (): JSX.Element => {
   const { currentExperience, experienceToNextLevel } = useChallenge()
 
   const percentLevel =

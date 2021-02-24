@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const Wrapper =styled.section`
+export const Wrapper = styled.section`
   flex: 1;
 
   display: grid;
@@ -19,6 +19,6 @@ export const Wrapper =styled.section`
   align-content: center;
 `
 
-export const RightContainer =styled.div``
+export const RightContainer = styled.div``
 
-export const LetfContainer =styled.div``
+export const LetfContainer = styled.div``

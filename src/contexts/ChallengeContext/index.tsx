@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import challenges from '../../utils/challenges.json'
 
 import { ChallengeContextProps, ChallengeProviderProps } from './types'

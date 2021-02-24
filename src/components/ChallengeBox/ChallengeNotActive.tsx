@@ -1,6 +1,8 @@
+import React from 'react'
+
 import * as Styles from './styles'
 
-const ChallengeNotActive = () => {
+const ChallengeNotActive = (): JSX.Element => {
   return (
     <Styles.ChallengeNotActive>
       <strong>Finalize um ciclo para receber um desafio</strong>

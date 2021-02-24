@@ -1,12 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
-import ChallengeBox from '../components/ChallengeBox';
+import ChallengeBox from '../components/ChallengeBox'
 
-import CompletedChallenges from "../components/CompletedChallenges";
-import Countdown from "../components/Countdown";
-import ExperienceBar from "../components/ExperienceBar";
-import Profile from "../components/Profile";
+import CompletedChallenges from '../components/CompletedChallenges'
+import Countdown from '../components/Countdown'
+import ExperienceBar from '../components/ExperienceBar'
+import Profile from '../components/Profile'
 
-import * as Styles from "../styles/pages/Home";
+import * as Styles from '../styles/pages/Home'
 
 const Home: React.FC = () => {
   return (

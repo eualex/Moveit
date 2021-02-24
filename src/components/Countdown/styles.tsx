@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-export const ContainerCountdown  = styled.div`
+export const ContainerCountdown = styled.div`
   & button:disabled {
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ export const ContainerCountdown  = styled.div`
   }
 `
 
-export const Countdown  = styled.div`
+export const Countdown = styled.div`
   display: flex;
   align-items: center;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ChallengeBox = styled.div`
   height: 100%;
@@ -72,7 +72,6 @@ export const ChallengeBoxMain = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 
   & strong {
     margin: 1rem;

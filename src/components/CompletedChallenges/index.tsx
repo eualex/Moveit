@@ -1,7 +1,9 @@
+import React from 'react'
+
 import useChallenge from '../../hooks/useChallenge'
 import * as Styles from './styles'
 
-const CompletedChallenges = () => {
+const CompletedChallenges = (): JSX.Element => {
   const { challengesCompleted } = useChallenge()
 
   return (
