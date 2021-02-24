@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Container = styled.header`
+declare interface ExprerienceBarStyleProps {
+  percentLevel: number
+}
+
+export const Container = styled.header<ExprerienceBarStyleProps>`
   display: flex;
   align-items: center;
 
@@ -21,7 +25,9 @@ export const Container = styled.header`
   }
 
   & > div > div {
-    width: 50%;
+    width: ${({ percentLevel }) => `${percentLevel}%`};
+
+    transition: width 0.3s linear;
 
     height: 4px;
     border-radius: 0.4rem;
@@ -29,10 +35,14 @@ export const Container = styled.header`
   }
 
   & > div .current-experience {
+    width: max-content;
+
     position: absolute;
-    left: 50%;
+    left: ${({ percentLevel }) => `${percentLevel}%`};
     top: 12px;
 
-    transform: translateX(-50%);
+    transition: all 0.3s linear;
+
+    transform: ${({ percentLevel }) => `translateX(-${percentLevel}%)`};
   }
 `
