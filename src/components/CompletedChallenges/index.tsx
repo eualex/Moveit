@@ -1,10 +1,13 @@
+import useChallenge from '../../hooks/useChallenge'
 import * as Styles from './styles'
 
-const CompletedChallenges: React.FC = () => {
+const CompletedChallenges = () => {
+  const { challengesCompleted } = useChallenge()
+
   return (
     <Styles.Container>
       <span className="completed-challenges">Desafios Completos</span>
-      <span className="total-completed-challenges">5</span>
+      <span className="total-completed-challenges">{challengesCompleted}</span>
     </Styles.Container>
   )
 }
