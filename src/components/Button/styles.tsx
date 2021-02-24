@@ -32,4 +32,8 @@ export const ButtonContainer = styled.button<ButtonStylesProps>`
       checkColorButton(colorType).hoverColor ||
       checkColorButton(colorType).color};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `
