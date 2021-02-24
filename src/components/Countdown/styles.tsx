@@ -1,6 +1,18 @@
 import styled from "styled-components"
 
-export const ContainerCountdown  = styled.div``
+export const ContainerCountdown  = styled.div`
+  & button:disabled {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5rem solid var(--green);
+
+    & > img {
+      margin-left: 1rem;
+
+      width: 2.5rem;
+    }
+  }
+`
 
 export const Countdown  = styled.div`
   display: flex;
@@ -42,30 +54,5 @@ export const Countdown  = styled.div`
     font-size: 10rem;
 
     margin: 0 0.8rem;
-  }
-`
-
-export const Button  = styled.button`
-  width: 100%;
-  height: 8rem;
-  margin-top: 3.2rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  border-radius: 0.5rem;
-
-  background-color: var(--blue);
-  color: var(--white);
-
-  font-size: 2rem;
-  font-weight: 600;
-
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    background-color: var(--blue-dark);
   }
 `
