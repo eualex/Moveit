@@ -1,10 +1,14 @@
-import GlobalStyles from '../styles/global'
 import { AppProps } from 'next/app'
 
-const MyApp: React.FC<AppProps>  = ({ Component, pageProps }) => {
+import GlobalStyles from '../styles/global'
+import Contexts from '../contexts'
+
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <Component {...pageProps} />
+      <Contexts>
+        <Component {...pageProps} />
+      </Contexts>
       <GlobalStyles />
     </>
   )
