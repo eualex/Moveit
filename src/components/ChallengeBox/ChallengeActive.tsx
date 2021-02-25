@@ -1,24 +1,12 @@
 import React from 'react'
 
 import useChallenge from '../../hooks/useChallenge'
-import useCountdown from '../../hooks/useCountdown'
 import Button from '../Button'
 
 import * as Styles from './styles'
 
 const ChallengeActive = (): JSX.Element => {
-  const { resetChallenge, activeChallenge, completeChallenge } = useChallenge()
-  const { resetCountdown } = useCountdown()
-
-  const handleChallengeSucceeded = () => {
-    completeChallenge()
-    resetCountdown()
-  }
-
-  const handleChallengeFailed = () => {
-    resetChallenge()
-    resetCountdown()
-  }
+  const { resetChallenge, activeChallenge } = useChallenge()
 
   return (
     <Styles.ChallengeActive>
@@ -31,14 +19,10 @@ const ChallengeActive = (): JSX.Element => {
         <p>{activeChallenge.description}</p>
       </Styles.ChallengeBoxMain>
       <Styles.ChallengeBoxFooter>
-        <Button type="button" color="danger" onClick={handleChallengeFailed}>
+        <Button type="button" color="danger" onClick={resetChallenge}>
           Falhei
         </Button>
-        <Button
-          type="button"
-          color="success"
-          onClick={handleChallengeSucceeded}
-        >
+        <Button type="button" color="success">
           Completei
         </Button>
       </Styles.ChallengeBoxFooter>
