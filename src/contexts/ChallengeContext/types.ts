@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-declare interface activeChallengeProps {
+export declare interface activeChallengeProps {
   type: 'body' | 'eye'
   description: string
   amount: number
@@ -15,6 +15,7 @@ export declare interface ChallengeContextProps {
   resetChallenge: () => void
   levelUp: () => void
   startNewChallenge: () => void
+  completeChallenge: () => void
 }
 
 export declare interface ChallengeProviderProps {
