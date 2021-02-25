@@ -24,6 +24,7 @@
     "space-before-function-paren": "off",
     "react/prop-types": "off",
     "multiline-ternary": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "no-new": "off"
   }
 }
