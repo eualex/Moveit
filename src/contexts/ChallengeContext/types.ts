@@ -16,6 +16,7 @@ export declare interface ChallengeContextProps {
   levelUp: () => void
   startNewChallenge: () => void
   completeChallenge: () => void
+  closeLevelUpModal: () => void
 }
 
 export declare interface ChallengeProviderProps {
