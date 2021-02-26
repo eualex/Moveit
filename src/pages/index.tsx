@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 
@@ -15,6 +15,7 @@ import ChallengeProvider from '../contexts/ChallengeContext'
 import CountdownProvider from '../contexts/CountdownContext'
 
 declare interface HomeProps {
+  children?: ReactNode
   level: number
   currentExperience: number
   challengeCompleted: number
