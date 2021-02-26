@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { CountdownContext } from '../contexts/CountdownContext/indext'
+import { CountdownContext } from '../contexts/CountdownContext'
 import { CountdownContextProps } from '../contexts/CountdownContext/types'
 
 const useCountdown = (): CountdownContextProps => {
