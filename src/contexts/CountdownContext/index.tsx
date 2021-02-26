@@ -11,7 +11,7 @@ const CountdownProvider = ({
 }: CountdownProviderProps): JSX.Element => {
   const { startNewChallenge } = useChallenge()
 
-  const [time, setTime] = useState(0.1 * 60)
+  const [time, setTime] = useState(25 * 60)
   const [isActive, setIsActive] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
 
@@ -26,7 +26,7 @@ const CountdownProvider = ({
     clearTimeout(countdownTimeout)
     setIsActive(false)
     setHasFinished(false)
-    setTime(0.1 * 60)
+    setTime(25 * 60)
   }
 
   useEffect(() => {
