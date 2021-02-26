@@ -20,7 +20,7 @@ export declare interface ChallengeContextProps {
 }
 
 export declare interface ChallengeProviderProps {
-  children: ReactNode
+  children?: ReactNode
   level: number
   currentExperience: number
   challengeCompleted: number
