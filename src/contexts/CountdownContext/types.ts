@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 export interface CountdownProviderProps {
-  children: ReactNode
+  children?: ReactNode
 }
 
 export interface CountdownContextProps {

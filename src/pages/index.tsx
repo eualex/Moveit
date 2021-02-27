@@ -21,7 +21,7 @@ declare interface HomeProps {
   challengeCompleted: number
 }
 
-const Home: React.FC<HomeProps> = props => {
+const Home = (props: HomeProps): JSX.Element => {
   return (
     <ChallengeProvider
       level={props.level}
